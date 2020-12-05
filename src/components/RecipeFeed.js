@@ -10,7 +10,8 @@ class RecipeFeed extends React.Component{
 
 		this.state = {
 			json : [],
-			url : "https://api.jsonbin.io/b/5fba52b090e7c66167f5678b/1",
+			//url : "https://spoonsprint.herokuapp.com/api",
+			url : "https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api",
 			items : [],
 		}
 
@@ -19,12 +20,12 @@ class RecipeFeed extends React.Component{
 		fetch(this.state.url)
 			.then(res => res.json())
 			.then(out => {
-			  	console.log('Checkout this JSON! ', out)
 				
 				let l = out.length
 
-				for (var j = 0; j < l; j ++)
+				for (var j = 0; j < l; j ++) {
 					this.state.items.push(<ListElement data={out[j]}/>)
+				}
 
 				this.setState({json : out })
 

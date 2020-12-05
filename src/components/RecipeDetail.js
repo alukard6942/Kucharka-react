@@ -4,28 +4,24 @@ class RecipeDetail extends React.Component {
 
 	constructor(props) {
 		super(props)
+		
+		this.state = {
+			id : props.match.params.id,
+			json : {},
+			url : `https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api/${props.match.params.id}`,
+		}
 
-		if (props.id) 
-			this.id = props.id
-		else
-			this.id = "default"
-
-
-		let url = `backend/${this.id}`
-
-		fetch (url)
+		fetch (this.state.url)
 			.then( res => res.json())
-			.then( out => console.log(out))
+			.then( out => this.setState({json: out}))
 			.catch( err => console.log(err))
 	}
 
 	render () {
 		return (
 			<>
-
-			<h1> {this.id} </h1>
-			<h2> todo </h2>
-
+				<h1> {this.state.json.name} </h1>
+				<h2> {this.state.json.desc} </h2>
 			</>
 		)
 	}

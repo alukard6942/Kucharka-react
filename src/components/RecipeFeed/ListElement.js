@@ -9,7 +9,6 @@ class RecipeDetail extends React.Component {
 		// binding is very nice and not at all anoing thing you just have to do coz fuck you
 		this.onClick = this.onClick.bind(this)
 
-		console.log(this.props)
 
 		this.name = props.data.name
 		this.desc = props.data.desc
@@ -18,10 +17,7 @@ class RecipeDetail extends React.Component {
 	}
 
 	onClick () {
-
-		console.log(this.props)
 		this.props.history.push ( `/id/${this.id}` )
-		// return <Redirect to={`/id/${this.id}`}/>
 	}
 
 	render () {
