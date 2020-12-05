@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Footer from './Footer'
 
 import React  from 'react';
 import { useHistory } from "react-router-dom";

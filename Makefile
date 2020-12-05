@@ -8,3 +8,6 @@ default: start
 
 start: 
 	npm start
+
+install: 
+	npm install

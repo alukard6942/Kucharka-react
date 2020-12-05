@@ -1,10 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function Footer(){
 
-	return (
-		<h1> This will be a Footer </h1>
-	)
+function Footer (){
+  return (
+	  <>
+	  <hr />
+	  <h1> this is footer </h1>
+	  </>
+  )
 }
+
+
 
 export default Footer
