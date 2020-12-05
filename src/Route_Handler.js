@@ -1,21 +1,27 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from './Header'
-import Footer from './Footer'
-import App from './App'
-import Recipe from './Recipe'
+import { BrowserRouter as Router, Route} from "react-router-dom";
+
+
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import RecipeFeed from './components/RecipeFeed'
+import RecipeDetail from './components/RecipeDetail'
 
 class Route_Handler extends Component {
   render() {
     return (
-        <Router>
-			<Header/>
-          <div className="Router">
-            <Route exact path="/" component={App} />
-			<Route exact path="/id/:id" component={Recipe} />
-            <Footer />
-          </div>
-        </Router>
+      <Router>
+
+			  <Navbar />
+
+        <div className="Router">
+          <Route exact path="/" component={RecipeFeed} />
+		      <Route exact path="/id/:id" component={RecipeDetail} />
+        </div>
+
+        <Footer />
+
+      </Router>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Recipe (props) {
+function RecipeDetail (props) {
 
 	console.log(props)
 
@@ -15,4 +15,4 @@ function Recipe (props) {
 	)
 }
 
-export default Recipe
+export default RecipeDetail;
