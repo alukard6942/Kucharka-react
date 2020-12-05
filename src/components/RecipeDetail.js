@@ -1,18 +1,34 @@
 import React from 'react'
 
+class RecipeDetail extends React.Component {
 
-function RecipeDetail (props) {
+	constructor(props) {
+		super(props)
 
-	console.log(props)
+		if (props.id) 
+			this.id = props.id
+		else
+			this.id = "default"
 
-	let id = props.match.params.id
 
-	return (
-		<>
-		<h1> Recept dummy </h1>
-		<h2> {id} </h2>
-		</>
-	)
+		let url = `backend/${this.id}`
+
+		fetch (url)
+			.then( res => res.json())
+			.then( out => console.log(out))
+			.catch( err => console.log(err))
+	}
+
+	render () {
+		return (
+			<>
+
+			<h1> {this.id} </h1>
+			<h2> todo </h2>
+
+			</>
+		)
+	}
 }
 
 export default RecipeDetail;

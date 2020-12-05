@@ -10,18 +10,14 @@ import RecipeDetail from './components/RecipeDetail'
 class Route_Handler extends Component {
   render() {
     return (
-      <Router>
-
-			  <Navbar />
-
-        <div className="Router">
-          <Route exact path="/" component={RecipeFeed} />
-		      <Route exact path="/id/:id" component={RecipeDetail} />
-        </div>
-
-        <Footer />
-
-      </Router>
+		<Router>
+			<Navbar />
+        	<div className="Router">
+        		<Route exact path="/" component={RecipeFeed} />
+				<Route exact path="/id/:id" component={RecipeDetail} />
+			</div>
+        	<Footer />
+		</Router>
     );
   }
 }
