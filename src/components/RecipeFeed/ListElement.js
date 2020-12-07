@@ -23,11 +23,9 @@ class RecipeDetail extends React.Component {
 	render () {
 		return (
 			<div onClick = {this.onClick} >
-
-			<b> {this.name} </b>
-			<p> {this.desc} </p>
-
-			<hr/>
+				<b> {this.name} </b>
+				<p> {this.desc} </p>
+				<hr/>
 			</div>
 		)
 	}

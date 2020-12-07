@@ -22,8 +22,8 @@ function Navbar () {
 				<div className="collapse navbar-collapse" id="mobile-nav">
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
-							<Link className="nav-link" to="/editwhateva">
-								Admin
+							<Link className="nav-link" to="/about">
+								About
 							</Link>
 						</li>
 					</ul>

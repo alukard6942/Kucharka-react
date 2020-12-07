@@ -6,6 +6,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import RecipeFeed from './components/RecipeFeed'
 import RecipeDetail from './components/RecipeDetail'
+import About from './components/About.js'
 
 class Route_Handler extends Component {
   render() {
@@ -15,6 +16,7 @@ class Route_Handler extends Component {
         	<div className="Router">
         		<Route exact path="/" component={RecipeFeed} />
 				<Route exact path="/id/:id" component={RecipeDetail} />
+				<Route exact path="/about" component={About} />
 			</div>
         	<Footer />
 		</Router>
