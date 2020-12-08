@@ -8,7 +8,7 @@ function Navbar () {
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
 			<div className="container">
 				<Link className="navbar-brand" to="/">
-					SpoonSprint
+					Kucharka
 				</Link>
 				<button
 					className="navbar-toggler"

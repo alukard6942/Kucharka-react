@@ -13,7 +13,7 @@ class Route_Handler extends Component {
     return (
 		<Router>
 			<Navbar />
-        	<div className="Router">
+        	<div className ="content">
         		<Route exact path="/" component={RecipeFeed} />
 				<Route exact path="/id/:id" component={RecipeDetail} />
 				<Route exact path="/about" component={About} />

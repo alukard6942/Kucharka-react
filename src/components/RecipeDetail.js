@@ -9,11 +9,15 @@ class RecipeDetail extends React.Component {
 			id : props.match.params.id,
 			json : {},
 			url : `https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api/${props.match.params.id}`,
+			image : "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif",
 		}
 
 		fetch (this.state.url)
 			.then( res => res.json())
-			.then( out => this.setState({json: out}))
+			.then( out => {
+				this.setState({json: out})
+				this.setState({image: "https://i.imgur.com/CUG0Aof.jpeg"})
+			})
 			.catch( err => console.log(err))
 	}
 
@@ -21,7 +25,9 @@ class RecipeDetail extends React.Component {
 		return (
 			<>
 				<h1> {this.state.json.name} </h1>
-				<h2> {this.state.json.desc} </h2>
+				<p> {this.state.json.desc} </p>
+				
+				<img src={this.state.image} />
 			</>
 		)
 	}

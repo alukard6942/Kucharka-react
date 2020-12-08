@@ -12,7 +12,13 @@ class RecipeFeed extends React.Component{
 			json : [],
 			//url : "https://spoonsprint.herokuapp.com/api",
 			url : "https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api",
-			items : [],
+			//url : "https://spoonsprint.herokuapp.com/api",
+			items : [	<img 
+				src = "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif" 
+				alt = "food prewie" 
+				width  = "90" 
+				height = "80" 
+			/>],
 		}
 
 		
@@ -22,6 +28,8 @@ class RecipeFeed extends React.Component{
 			.then(out => {
 				
 				let l = out.length
+
+				this.setState({ items : [] })
 
 				for (var j = 0; j < l; j ++) {
 					this.state.items.push(<ListElement data={out[j]}/>)
@@ -34,7 +42,6 @@ class RecipeFeed extends React.Component{
   	}
 
 	render() {
-
 		return (
 			<>
 				{this.state.items}
