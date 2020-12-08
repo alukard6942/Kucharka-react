@@ -9,7 +9,7 @@ function Description(props) {
 
 	return (
 		<div  className="Description">
-			<b> {name} </b>
+			<h5> {name} </h5>
 			<p> {desc} </p>
 		</div>
 	)
