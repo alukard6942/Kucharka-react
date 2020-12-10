@@ -22,10 +22,26 @@ function Navbar () {
 				<div className="collapse navbar-collapse" id="mobile-nav">
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
-							<Link className="nav-link" to="/about">
-								About
+							<Link className="nav-link" to="/">
+								recomended
 							</Link>
 						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/favorited">
+								most favorited
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/new">
+								new
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/about">
+								About us
+							</Link>
+						</li>
+
 					</ul>
 				</div>
 			</div>

@@ -31,7 +31,6 @@ body {
 }
 
 .dropdown-content a {
-  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -46,13 +45,12 @@ body {
 /* the thing betwen header and footer */
 .content { 
 	min-height: calc(100vh - 200px);
-	padding-left: 35px;
+	padding: 0px 35px;
 }
 
 .recipeFeed {
 	padding-left: 15px;
-	/* this does seemingli nothing but somehow repers one bug */
-	padding-right: 50px;
+	margin: auto;
 }
 
 .ListElement:hover { border : 3px solid  rgba(68, 71, 90, 1) }
@@ -64,6 +62,7 @@ body {
 .hdSec {
 	align: left;
 }
+
 
 .feedRow {
     width: 90%;
