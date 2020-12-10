@@ -1,6 +1,7 @@
-import React  from 'react';
-import { useHistory } from "react-router-dom";
-import ListElement from './RecipeFeed/ListElement';
+import React  from 'react'
+import { useHistory } from "react-router-dom"
+import ListElement from './RecipeFeed/ListElement'
+import Header from './RecipeFeed/Header'
 
 // wherever class or function this is a componet
 class RecipeFeed extends React.Component{
@@ -29,12 +30,6 @@ class RecipeFeed extends React.Component{
 				this.setState({ items : [] })
 
 				for (var j = 0; j < l; j ++) {
-					out[0].desc = `
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-					`
 					this.state.items.push(<ListElement data={out[j]}/>)
 				}
 
@@ -48,7 +43,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 		return (
 			<>
-				{this.state.items}
+				<Header />
+				<div className="recipeFeed">
+					{this.state.items}
+				</div>
 			</>
 		)
 	}

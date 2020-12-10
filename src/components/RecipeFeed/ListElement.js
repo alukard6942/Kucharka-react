@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom';
 
 import Description from './Description.js'
+import Image from './Image'
 
 class RecipeDetail extends React.Component {
 
@@ -25,7 +26,11 @@ class RecipeDetail extends React.Component {
 		return (
 			<>
 			<div className = "row" onClick = {this.onClick} >
-				<img src = "https://i.imgur.com/CUG0Aof.jpeg" alt = "food prewie" width="90" height = "80" />
+				<Image 
+					id     = {this.id} 
+					width  = "75"
+					height = "75"
+				/>
 				<Description 
 					name = {this.name}
 					desc = {this.desc}

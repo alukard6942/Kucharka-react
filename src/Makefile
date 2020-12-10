@@ -7,7 +7,7 @@ default: start
 
 
 start: 
-	npm start
+	npm start 
 
 install: 
 	npm install

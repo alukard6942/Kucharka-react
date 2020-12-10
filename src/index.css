@@ -17,6 +17,24 @@ body {
 	padding-left: 35px;
 }
 
+.recipeFeed {
+	padding-left: 15px;
+	/* this does seemingli nothing but somehow repers one bug */
+	padding-right: 50px;
+}
+
+.hdSec {
+	align: left;
+}
+
+.feedRow {
+    width: 90%;
+}
+
+.feedHeader {
+	border: 1px solid #999;
+}
+
 .Description {
 	margin-top: 6px;
 	padding-left: 10px;
