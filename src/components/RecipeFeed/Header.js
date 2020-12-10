@@ -1,6 +1,17 @@
 import React from 'react'
 
-function Header() {
+function Header(props) {
+
+
+	let title = " Recommended Recipes "
+
+	if (props.title == "new")
+		title = " New recipes "
+	if (props.title == "favorite")
+		title = " Most favorite recipes "
+	if (props.title == "views")
+		title = " Most viewed recipes "
+	
 
 	let style={
 		"text-align":"right"
@@ -15,8 +26,18 @@ function Header() {
 	 	<tr>
 	 	 	<th>
 			<h2>
-				Recommended recipes 
+				{title}
 			</h2>
+			</th>
+	 	 	<th>
+				<div className="dropdown">
+				  <button className="dropbtn">Dropdown</button>
+				  <div className="dropdown-content">
+				    <a href="#">Link 1</a>
+				    <a href="#">Link 2</a>
+				    <a href="#">Link 3</a>
+				  </div>
+				</div>
 			</th>
 	 	</tr>
 	</table>

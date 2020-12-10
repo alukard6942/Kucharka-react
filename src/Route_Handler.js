@@ -15,10 +15,9 @@ class Route_Handler extends Component {
 			<Navbar />
         	<div className ="content">
         		<Route exact path="/" component={RecipeFeed} />
-        		<Route exact path="/recommended" component={RecipeFeed} />
         		<Route exact path="/new" component={RecipeFeed} />
-        		<Route exact path="/mostviewed" component={RecipeFeed} />
-        		<Route exact path="/mostfavored" component={RecipeFeed} />
+        		<Route exact path="/views" component={RecipeFeed} />
+        		<Route exact path="/favored" component={RecipeFeed} />
 				<Route exact path="/id/:id" component={RecipeDetail} />
 				<Route exact path="/about" component={About} />
 			</div>

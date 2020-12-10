@@ -25,11 +25,11 @@ class RecipeDetail extends React.Component {
 	render () {
 		return (
 			<>
-			<div className = "row" onClick = {this.onClick} >
+			<div className = "row ListElement" onClick = {this.onClick} >
 				<Image 
 					id     = {this.id} 
-					width  = "75"
-					height = "75"
+					width  = "80"
+					height = "80"
 				/>
 				<Description 
 					name = {this.name}

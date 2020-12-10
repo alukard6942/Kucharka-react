@@ -11,6 +11,38 @@ body {
 
 }
 
+.dropbtn {
+  padding: 8px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 /* the thing betwen header and footer */
 .content { 
 	min-height: calc(100vh - 200px);
@@ -21,6 +53,12 @@ body {
 	padding-left: 15px;
 	/* this does seemingli nothing but somehow repers one bug */
 	padding-right: 50px;
+}
+
+.ListElement:hover { border : 3px solid  rgba(68, 71, 90, 1) }
+
+.ListElement {
+	margin-top: 6px;
 }
 
 .hdSec {
@@ -36,7 +74,6 @@ body {
 }
 
 .Description {
-	margin-top: 6px;
 	padding-left: 10px;
 	width : 70%;
 	height: 78px;

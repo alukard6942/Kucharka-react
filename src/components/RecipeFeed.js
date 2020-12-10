@@ -9,8 +9,8 @@ class RecipeFeed extends React.Component{
 	constructor(props) {
 		super(props)
 
-
 		this.state = {
+			mode : props.match.path.substring(1),
 			json : [],
 			//url : "https://spoonsprint.herokuapp.com/api",
 			url : "https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api",
@@ -22,7 +22,7 @@ class RecipeFeed extends React.Component{
 
 		
 		// download json from backend
-		fetch(this.state.url)
+		fetch(`${this.state.url}/${this.state.mode}`)
 			.then(res => res.json())
 			.then(out => {
 				
@@ -31,7 +31,9 @@ class RecipeFeed extends React.Component{
 				this.setState({ items : [] })
 
 				for (var j = 0; j < l; j ++) {
-					this.state.items.push(<ListElement data={out[j]}/>)
+					this.state.items.push(<ListElement
+						className = "ListElement"
+						data={out[j]}/>)
 				}
 
 				this.setState({json : out })
@@ -44,7 +46,7 @@ class RecipeFeed extends React.Component{
 
 		return (
 			<>
-				<Header />
+				<Header title = {this.state.mode} />
 				<div className="recipeFeed">
 					{this.state.items}
 				</div>
