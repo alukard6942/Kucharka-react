@@ -11,9 +11,14 @@ body {
 
 }
 
+
+
+/* dropdown */
 .dropbtn {
-  padding: 8px;
-  border: none;
+  	border: none;
+  	padding: 8px;
+  	min-width: 160px;
+	background-color: rgba(40, 42, 54, 1) ;
 }
 
 .dropdown {
@@ -24,7 +29,6 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -36,11 +40,13 @@ body {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: rgba(68, 71, 90, 1);}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: rgba(68, 71, 90, 1);}
+
+/* dropdown end */
 
 /* the thing betwen header and footer */
 .content { 
@@ -59,17 +65,15 @@ body {
 	margin-top: 6px;
 }
 
-.hdSec {
-	align: left;
-}
 
 
 .feedRow {
     width: 90%;
+	margin-bottom : -5px
 }
 
 .feedHeader {
-	border: 1px solid #999;
+	border: 1px solid rgba(68, 71, 90, 1) 
 }
 
 .Description {

@@ -7,11 +7,11 @@ function Header(props) {
 
 	if (props.title == "new")
 		title = " New recipes "
-	if (props.title == "favorite")
-		title = " Most favorite recipes "
+	if (props.title == "favourite")
+		title = " Most favourite recipes "
 	if (props.title == "views")
 		title = " Most viewed recipes "
-	
+
 
 	let style={
 		"text-align":"right"
@@ -31,11 +31,14 @@ function Header(props) {
 			</th>
 	 	 	<th>
 				<div className="dropdown">
-				  <button className="dropbtn">Dropdown</button>
+				  <button className="dropbtn">
+						 sort by : 
+					</button>
 				  <div className="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
+				    <a href="/">recomended</a>
+				    <a href="/views">best</a>
+				    <a href="/favourite">favourite</a>
+				    <a href="/new">new</a>
 				  </div>
 				</div>
 			</th>

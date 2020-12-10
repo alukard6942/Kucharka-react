@@ -22,13 +22,24 @@ function Navbar () {
 				<div className="collapse navbar-collapse" id="mobile-nav">
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
+							<Link className="nav-link" to="/create">
+								Creator
+							</Link>
+						</li>
+
+						<li className="nav-item">
 							<Link className="nav-link" to="/">
 								recomended
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" to="/favorited">
-								most favorited
+							<Link className="nav-link" to="/views">
+								best
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/favourite">
+								favourite
 							</Link>
 						</li>
 						<li className="nav-item">
@@ -38,10 +49,8 @@ function Navbar () {
 						</li>
 						<li className="nav-item">
 							<Link className="nav-link" to="/about">
-								About us
-							</Link>
+								About							</Link>
 						</li>
-
 					</ul>
 				</div>
 			</div>
