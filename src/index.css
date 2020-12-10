@@ -14,21 +14,30 @@ body {
 /* the thing betwen header and footer */
 .content { 
 	min-height: calc(100vh - 200px);
-	padding-left: 35px;
+	padding: 0px 35px;
 }
 
 .recipeFeed {
-	padding-left: 15px;
-	/* this does seemingli nothing but somehow repers one bug */
-	padding-right: 50px;
+
+	margin: auto;
 }
 
 .hdSec {
 	align: left;
 }
 
+.row {
+	margin-top: 50px;
+	border: 5px solid transparent;
+}
+
 .feedRow {
     width: 90%;
+}
+
+.fImgWrapper {
+	height: 100%;
+	padding: auto;
 }
 
 .feedHeader {

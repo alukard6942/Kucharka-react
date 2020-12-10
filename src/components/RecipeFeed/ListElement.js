@@ -26,11 +26,12 @@ class RecipeDetail extends React.Component {
 		return (
 			<>
 			<div className = "row" onClick = {this.onClick} >
-				<Image 
-					id     = {this.id} 
-					width  = "75"
-					height = "75"
-				/>
+					<Image
+						className="recipeFeedImg"
+						id     = {this.id} 
+						width  = "100"
+						height = "100"
+					/>	
 				<Description 
 					name = {this.name}
 					desc = {this.desc}
