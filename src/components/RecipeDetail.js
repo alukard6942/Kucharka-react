@@ -6,7 +6,7 @@ class RecipeDetail extends React.Component {
 
 	constructor(props) {
 		super(props)
-		
+
 		this.state = {
 			id : props.match.params.id,
 			json : {},
