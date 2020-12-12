@@ -1,5 +1,4 @@
 import React  from 'react'
-import { useHistory } from "react-router-dom"
 import ListElement from './RecipeFeed/ListElement'
 import Header from './RecipeFeed/Header'
 
@@ -16,7 +15,7 @@ class RecipeFeed extends React.Component{
 			url : "https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api",
 			//url : "https://spoonsprint.herokuapp.com/api",
 			items : [	
-				<img src = "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif" />
+				<img alt="ME:AL" src = "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif" />
 			],
 		}
 

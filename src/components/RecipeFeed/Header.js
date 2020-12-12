@@ -5,17 +5,13 @@ function Header(props) {
 
 	let title = " Recommended Recipes "
 
-	if (props.title == "new")
+	if (props.title === "new")
 		title = " New recipes "
-	if (props.title == "favourite")
+	if (props.title === "favourite")
 		title = " Most favourite recipes "
-	if (props.title == "views")
+	if (props.title === "views")
 		title = " Most viewed recipes "
 
-
-	let style={
-		"text-align":"right"
-	}
 
 	return ( <>
 	<table>

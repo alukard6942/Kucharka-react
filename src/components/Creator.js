@@ -8,8 +8,7 @@ class Creator extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			url : `https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api/`,
-			//url : `https://spoonsprint.herokuapp.com/api/`,
+			url : `https://spoonsprint.herokuapp.com/api/`,
 			title 		: "",
 			description : "",
 			image 		: "",
@@ -27,12 +26,11 @@ class Creator extends React.Component {
 
 	handleSubmit(event) {
 
-		// parse form 
 		let targ = event.target
 		let iter = 0
 
 		let data = {
-			title : targ[iter++].value,
+			name : targ[iter++].value,
 			desc  : targ[iter++].value,
 			// image : targ[iter++].value,
 			ingr  : [],
@@ -41,7 +39,7 @@ class Creator extends React.Component {
 
 		iter = iter +1
 
-		while (targ[iter].id == "ingrediance" ) {
+		while (targ[iter].id === "ingrediance" ) {
 
 			if (targ[iter].value) data.ingr.push({
 				name   : targ[iter++].value,
@@ -51,37 +49,32 @@ class Creator extends React.Component {
 			else iter+=3
 		}
 
-		while (targ[iter].id == "instraction" ) {
+		while (targ[iter].id === "instraction" ) {
 
 			if (targ[iter].value) data.inst.push({
 				name   	  : targ[iter++].value,
-				desc      : targ[iter++].value,
-				startTime : targ[iter++].value,
 				duration  : targ[iter++].value,
+				startTime : targ[iter++].value,
+				desc      : targ[iter++].value
 			})
 			else iter+=4
 		}
 
 		console.log (data)
+		
+		const requestOptions = {
+			method: 'POST',
+			headers: { 
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin' : '*'
+			},
+			body: JSON.stringify(data)
+		};
 
-
-		// post data
-		let xhr = new XMLHttpRequest(); 
-        
-        // open a connection 
-        xhr.open("POST", this.state.url, true); 
-  
-        // Set the request header i.e. which type of content you are sending 
-        // xhr.setRequestHeader("Content-Type", "application/json"); 
-  
-        // Create a state change callback 
-        xhr.onreadystatechange = function () { 
-            if (xhr.readyState === 4 && xhr.status === 200) { 
-            } 
-        }; 
-  
-        // Sending data with the request 
-        xhr.send(JSON.stringify(data)); 
+		fetch(
+			this.state.url,
+			requestOptions
+		).then((res, err)=>(console.log(res + " : " + err)));
 
 		event.preventDefault();
 	}
@@ -115,7 +108,7 @@ class Creator extends React.Component {
 				<Instraction/>
 			</div>
 
-			<h6/>
+			<p></p>
 	  		<input type="submit" value="Submit" />
 
 
