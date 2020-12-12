@@ -15,7 +15,7 @@ exports.initVal = function(name, desc) {
 exports.validIngr = function(name, amount, unit) {
     let ingrObj = {
         name   : "ingredience",
-        amount : 0,
+        amount : 1,
         unit   : "",
     }
 
@@ -28,16 +28,14 @@ exports.validIngr = function(name, amount, unit) {
 
 
 
-exports.validInst = function(name, startTime, duration, desc) {
+exports.validInst = function(name, duration, desc) {
     let instObj = {
-        name   	  : "step",
-        startTime : 0,
+        name   	  : "",
         duration  : 0,
-        desc      : "step description"
+        desc      : "umyjeme si ruce"
     }
 
     if(name !== "" && name !== undefined) instObj.name = name;
-    if(startTime !== undefined && !isNaN(parseInt(startTime))) instObj.startTime = parseInt(startTime);
     if(duration !== undefined && !isNaN(parseInt(duration))) instObj.duration = parseInt(duration);
     if(desc !== "" && desc !== undefined) instObj.desc = desc;
 
