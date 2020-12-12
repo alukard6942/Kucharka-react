@@ -37,8 +37,6 @@ class Creator extends React.Component {
 
 		while (targ[iter].id === "ingrediance" ) {
 
-
-
 			if (targ[iter].value) 
 				data.ingr.push( validIngr(targ[iter++].value, targ[iter++].value, targ[iter++].value));
 			else iter+=3
