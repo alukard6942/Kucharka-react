@@ -3,6 +3,8 @@ import React from 'react'
 import Ingrediance from './Creator/Ingrediance'
 import Instraction  from './Creator/Instruction'
 
+import { initVal, validIngr, validInst } from '../validation';
+
 
 class Creator extends React.Component {
 	constructor(props) {
@@ -29,34 +31,23 @@ class Creator extends React.Component {
 		let targ = event.target
 		let iter = 0
 
-		let data = {
-			name : targ[iter++].value,
-			desc  : targ[iter++].value,
-			// image : targ[iter++].value,
-			ingr  : [],
-			inst  : [],
-		}
+		let data = initVal(targ[iter++].value, targ[iter++].value)
 
 		iter = iter +1
 
 		while (targ[iter].id === "ingrediance" ) {
 
-			if (targ[iter].value) data.ingr.push({
-				name   : targ[iter++].value,
-				amount : targ[iter++].value,
-				unit   : targ[iter++].value,
-			})
+
+
+			if (targ[iter].value) 
+				data.ingr.push( validIngr(targ[iter++].value, targ[iter++].value, targ[iter++].value));
 			else iter+=3
 		}
 
 		while (targ[iter].id === "instraction" ) {
 
-			if (targ[iter].value) data.inst.push({
-				name   	  : targ[iter++].value,
-				duration  : targ[iter++].value,
-				startTime : targ[iter++].value,
-				desc      : targ[iter++].value
-			})
+			if (targ[iter].value) 
+				data.inst.push(validInst(targ[iter++].value, targ[iter++].value, targ[iter++].value, targ[iter++].value));
 			else iter+=4
 		}
 

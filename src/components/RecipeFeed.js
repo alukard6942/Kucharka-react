@@ -12,7 +12,7 @@ class RecipeFeed extends React.Component{
 			mode : props.match.path.substring(1),
 			json : [],
 			//url : "https://spoonsprint.herokuapp.com/api",
-			url : "https://cors-anywhere.herokuapp.com/https://spoonsprint.herokuapp.com/api",
+			url : "https://spoonsprint.herokuapp.com/api",
 			//url : "https://spoonsprint.herokuapp.com/api",
 			items : [	
 				<img alt="ME:AL" src = "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif" />
@@ -21,7 +21,7 @@ class RecipeFeed extends React.Component{
 
 		
 		// download json from backend
-		fetch(`${this.state.url}/${this.state.mode}`)
+		fetch(`${this.state.url}/`)
 			.then(res => res.json())
 			.then(out => {
 				
