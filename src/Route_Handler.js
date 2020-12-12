@@ -7,7 +7,7 @@ import Footer from './components/layout/Footer'
 import RecipeFeed from './components/RecipeFeed'
 import RecipeDetail from './components/RecipeDetail'
 import About from './components/About.js'
-import Creator from './Creator.js'
+import Creator from './components/Creator.js'
 
 class Route_Handler extends Component {
   render() {
@@ -21,7 +21,7 @@ class Route_Handler extends Component {
         		<Route exact path="/favourite" component={RecipeFeed} />
 				<Route exact path="/id/:id" component={RecipeDetail} />
 				<Route exact path="/about" component={About} />
-				<Route exact path="/create" component={Creator} />
+				<Route exact path="/post" component={Creator} />
 			</div>
         	<Footer />
 		</Router>

@@ -1,3 +1,19 @@
+
+# TODO:
+ - creator
+ - walktrue
+ - favorite {set; get}
+
+
+veprova kotleta
+
+
+veprova kotleta je oblibeny pokrm ceske smetanky, zejmena pak v orlickych horach kde ji jedi zejmena tamni drevorubci originalni kotleta tak jak se dela p orlicku se ovsem smazi v zmule cerstve zkacenych stromu aby vinikla ta spravna dozlatovela bava kterou je orlicka kotleta tak vsetozname vyhlasena
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
