@@ -34,14 +34,18 @@ class Instraction extends React.Component {
 
 	}
 
+
+	/*
+		<label>                          
+	    	<input name="start" placeholder="start" size="5" type="text" value={this.state.start} onChange={this.handleChange} />       
+		</label>
+	*/
+
 	render () { return (<>
 		<div>
 		<label>
 	    	<input name="name" id="instraction"  placeholder="name ( optional )"   type="text" value={this.state.name} onChange={this.handleChange} />       
 	   	</label>                         
-		<label>                          
-	    	<input name="start" placeholder="start" size="5" type="text" value={this.state.start} onChange={this.handleChange} />       
-	   	</label>                        
 		<label>                         
 	    	<input name="duration"   placeholder="duration"   size="5" type="text" value={this.state.duration} onChange={this.handleChange} />       
 	   	</label>

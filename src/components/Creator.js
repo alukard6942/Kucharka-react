@@ -45,8 +45,8 @@ class Creator extends React.Component {
 		while (targ[iter].id === "instraction" ) {
 
 			if (targ[iter].value) 
-				data.inst.push(validInst(targ[iter++].value, targ[iter++].value, targ[iter++].value, targ[iter++].value));
-			else iter+=4
+				data.inst.push( validInst(targ[iter++].value, targ[iter++].value, targ[iter++].value));
+			else iter+=3
 		}
 
 		console.log (data)
