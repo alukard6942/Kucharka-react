@@ -21,6 +21,7 @@ class RecipeDetail extends React.Component {
 
 		this.onClick = this.onClick.bind(this)
 		this.addToFav = this.addToFav.bind(this)
+		this.remRec = this.remRec.bind(this)
 
 		fetch (this.state.url)
 			.then( res => res.json())
@@ -52,6 +53,23 @@ class RecipeDetail extends React.Component {
 				this.state.json.favourite = !this.state.json.favourite;
 				
 				this.forceUpdate();
+			})
+			.catch( err => console.log(err))
+	}
+
+	remRec() {
+		if (window.confirm('Are you sure you want to save this thing into the database?')) {
+		  } else {
+			return;
+		  }
+		fetch ('https://spoonsprint.herokuapp.com/api/' + this.props.match.params.id,
+			{
+				method: 'DELETE'
+			}
+		)
+			.then( res => res.json())
+			.then( out => {
+				this.props.history.push ( `../` )
 			})
 			.catch( err => console.log(err))
 	}
@@ -102,6 +120,14 @@ class RecipeDetail extends React.Component {
 					Walkthrough
 			</button>
 		</div>
+
+			<hr/>
+			<hr/>
+			<hr/>
+
+		<button onClick = {this.remRec}>
+					Remove Recipe
+		</button>
 		
 	</>)}
 }

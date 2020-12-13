@@ -63,8 +63,7 @@ class Creator extends React.Component {
 		fetch(
 			this.state.url,
 			requestOptions
-		).then((res, err)=>(console.log(res + " : " + err)));
-
+		).then((res, err)=>{(console.log(res + " : " + err))});
 		event.preventDefault();
 	}
 	
