@@ -85,6 +85,28 @@ body {
 }
 
 
+
+.wlth_shadowp {
+}
+
+.wlth_desc {
+	width : 70%;
+}
+
+.wlth_box {
+	padding-top : 18px;
+	margin: auto 0px;
+	width : 80px;
+	height: 80px;
+	background : rgba(68, 71, 90, 1);
+	border: 10px solid rgba(40, 42, 54, 1);
+	text-align : center;
+}
+
+.wlth_box:hover {
+	background : rgba(40, 42, 54, 1);
+}
+
 footer{
 	margin-top:100vh;
 }

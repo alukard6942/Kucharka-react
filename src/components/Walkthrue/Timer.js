@@ -10,7 +10,9 @@ class Timer extends React.Component {
 
 		this.state = {
 			time   : Number(props.cuntdown),
+			timeOrg: Number(props.cuntdown),
 			running: false,
+			styles : props.style
 		}
 	}
 
@@ -28,6 +30,10 @@ class Timer extends React.Component {
 
 	onClick () {
 		this.state.running = !this.state.running
+
+		if (!this.state.time) 
+			this.setState({time : this.state.timeOrg})
+
 		this.EventLoop()
 
 		console.log(this.state)
@@ -35,7 +41,7 @@ class Timer extends React.Component {
 
 	render () {return(<>
 
-		<div className="wlth_box" onClick={this.onClick} >
+		<div className="wlth_box" onClick={this.onClick} style={this.state.styles}>
 			{this.state.time}
 		</div>
 	</>)}
