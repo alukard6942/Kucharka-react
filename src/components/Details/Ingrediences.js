@@ -8,14 +8,18 @@ function Ingrediences(props) {
 	let items = [];
 
 	ingr.forEach(element => {
-		items.push(<li> {element.name} </li>)
+		items.push(
+			<div className="ingrItem">
+				<h5 className="ingrName">{element.name + " "}</h5>
+				<h5 className="ingrAmount">{element.amount || ""}</h5>
+				<h5 className="ingrUnit">{" " + element.unit || ""}</h5>
+			</div>
+			)
 	});
 
 	return (
-		<div  className="Ingrediences">
-			<ul>
-                {items}
-            </ul>
+		<div  className="ingrDiv">
+            {items}
 		</div>
 	)
 }

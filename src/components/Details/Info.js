@@ -10,8 +10,8 @@ function Info(props) {
 
 	return (
 		<div  className="Info">
-                <h5>{views}</h5>
-                <h5>{date.toDateString()}</h5>
+            <h5 className="detailViews">{"Videné " + views + "x"}</h5>
+            <h5 className="detailDate">{date.toDateString()}</h5>  
 		</div>
 	)
 }

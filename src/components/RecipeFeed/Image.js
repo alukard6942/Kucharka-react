@@ -9,6 +9,7 @@ class Image extends React.Component {
 
 		let width = props.width
 		let height = props.height
+		this.clName = props.disClassName || ""
 
 		if (width) 
 			this.width = width
@@ -20,6 +21,7 @@ class Image extends React.Component {
 		else 
 			this.height = ""
 
+				
 
 		// this is a provizory mockup of backed
 		this.imageBackend = [
@@ -50,7 +52,7 @@ class Image extends React.Component {
 	render() {
 		return (
 			<>
-			<img src={this.getImage()} alt = "food prewie" height={this.width} width={this.height} />
+			<img className={this.clName} src={this.getImage()} alt = "food prewie" height={this.width} width={this.height} />
 			</>
 		)
 	}

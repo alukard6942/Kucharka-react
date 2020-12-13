@@ -243,6 +243,13 @@ a.active *,
 	margin: 5px 0px;
 }
 
+.starClick {
+	display: inline-block;
+	background-color: rgba(40, 42, 54, 1) ;
+	margin-top: -19px;
+	margin-left: 15px;
+}
+
 .starClick:hover {
 	cursor: pointer;
 	transform: scale(1.15, 1.15);
@@ -250,6 +257,71 @@ a.active *,
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.starClick:active {
-	fill: "red"
+.detailHeadline {
+	display: inline-block;
+}
+
+.detailViews {
+	margin-top: -10px;
+	margin-left: 2px;
+	font-weight: 500;
+}
+
+.detailDate {
+	color: white;
+	font-weight: 300;
+	font-size: 15px;
+	margin-top: -5px;
+	margin-left: 2px;
+}
+
+.detailImage {
+	max-height: 500px;
+	width: auto;
+	max-width: 50%;
+	float: left;
+	margin-right: 25px;
+}
+
+.detailDesc {
+	font-weight: 600;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+
+.detailImgWrap {
+	display: flex;  
+  	flex-wrap: wrap;
+}
+
+.ingrDiv {
+	display: block;
+}
+
+.ingrItem h5 {
+	display: inline;
+	color: white;
+}
+
+.ingrName {
+
+}
+
+.ingrAmount {
+	font-weight: 300;
+}
+
+.ingrUnit {
+	font-weight: 400;
+}
+
+.instDesc {
+	color: white;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.instDiv {
+	margin-top: 25px;
+	max-width: 1000px;
 }

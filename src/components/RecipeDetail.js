@@ -26,7 +26,8 @@ class RecipeDetail extends React.Component {
 			.then( res => res.json())
 			.then( out => {
 				this.setState({json: out})
-				this.setState({image: <Image 
+				this.setState({image: <Image
+					disClassName="detailImage"
 					id = {this.state.id}
 					width = '40%'
 					height = '25%'
@@ -48,8 +49,6 @@ class RecipeDetail extends React.Component {
 		)
 			.then( res => res.json())
 			.then( out => {
-				if(this.state.json.favourite) this.state.json.views--;
-				else this.state.json.views++;
 				this.state.json.favourite = !this.state.json.favourite;
 				
 				this.forceUpdate();
@@ -64,36 +63,45 @@ class RecipeDetail extends React.Component {
 		
 		return(<>
 
-		<h1> {this.state.json.name} </h1>
 
-		<img class="starClick starPicture"
-                    height="35px"
-                    src={iconSrc}
-					alt="star"
-					onClick = {this.addToFav}
-                    
-        />
+		<div className="detailHeadWrap">
+			<h1 className="detailHeadline"> {this.state.json.name} </h1>
 
+			<img class="starClick"
+						height="35px"
+						src={iconSrc}
+						alt="star"
+						onClick = {this.addToFav}
+						
+			/>
+		</div>
+
+		
 		<Info
 			views = {this.state.json.views}
 			date = {this.state.json.timestamp}
 		/>
+		
+		<p class="detailDesc"> {this.state.json.desc} </p>
 
-		<p> {this.state.json.desc} </p>
+		<div className="detailBotWrap">
+			
+			{this.state.image}
 
-		{this.state.image}
 
-		<Ingrediences
-			ingr = {this.state.json.ingr || []}
-		/>
+			<Ingrediences
+				ingr = {this.state.json.ingr || []}
+			/>
 
-		<Instructions
-			inst = {this.state.json.inst || []}
-		/>
-
-		<button onClick = {this.onClick}>
-			Walkthrue
-		</button>
+			<div className="detailInsWrap">
+				<Instructions
+					inst = {this.state.json.inst || []}
+				/>
+			</div>
+			<button onClick = {this.onClick}>
+					Walkthrough
+			</button>
+		</div>
 		
 	</>)}
 }
