@@ -19,9 +19,12 @@ class RecipeFeed extends React.Component{
 			],
 		}
 
-		
+		if(this.state.mode === "views") {
+			this.state.url = this.state.url + "/views";
+		}
+
 		// download json from backend
-		fetch(`${this.state.url}/`)
+		fetch(`${this.state.url}`)
 			.then(res => res.json())
 			.then(out => {
 				

@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import Description from './Description.js'
 import Image from './Image'
+import ViewsF from './ViewsF'
 
 class RecipeDetail extends React.Component {
 
@@ -15,6 +16,9 @@ class RecipeDetail extends React.Component {
 		this.name = props.data.name
 		this.desc = props.data.desc
 		this.id   = props.data._id
+		this.views = props.data.views
+		this.date = props.data.timestamp
+		this.fav = props.data.favourite
 
 	}
 
@@ -34,6 +38,10 @@ class RecipeDetail extends React.Component {
 				<Description 
 					name = {this.name}
 					desc = {this.desc}
+				/>
+				<ViewsF
+					views = {this.views}
+					fav = {this.fav}
 				/>
 			</div>
 			</>
