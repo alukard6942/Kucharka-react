@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Image from './RecipeFeed/Image'
+import Item from './Walkthrue/Item'
 
-class RecipeDetail extends React.Component {
+class Walkthrue extends React.Component {
 
 	constructor(props) {
 		super(props)
@@ -11,41 +11,38 @@ class RecipeDetail extends React.Component {
 			id : props.match.params.id,
 			json : {},
 			url : `https://spoonsprint.herokuapp.com/api/${props.match.params.id}`,
-			image : 
+			items : 
 			<img alt="ME:AL" id="loadingGif" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif"/>,
 		}
-
-		this.onClick = this.onClick.bind(this)
 
 		fetch (this.state.url)
 			.then( res => res.json())
 			.then( out => {
+
+				this.setState({items : [] })
+
+				for (var i in out.inst) {
+					let item = out.inst[i]
+
+					this.setState({items : [...this.state.items, <Item 
+						name     = {item.name}
+						desc     = {item.desc}
+						duration = {item.duration}
+					/>]})
+				}
+
+
+
 				this.setState({json: out})
-				this.setState({image: <Image 
-					id = {this.state.id}
-					width = '40%'
-					height = '40%'
-					/>})
 			})
 			.catch( err => console.log(err))
 	}
 
-	onClick () {
-		this.props.history.push ( `/walkthrough/${this.state.id}` )
-	}
-
 	render () {return(<>
 
-		<h1> {this.state.json.name} </h1>
-		<p> {this.state.json.desc} </p>
-
-		<button onClick = {this.onClick}>
-			Walkthrue
-		</button>
-		
-		{this.state.image}
+		{this.state.items}
 		
 	</>)}
 }
 
-export default RecipeDetail;
+export default Walkthrue
