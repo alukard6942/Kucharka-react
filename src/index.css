@@ -273,7 +273,7 @@ a.active *,
 }
 
 .detailDate {
-	color: white;
+	color: rgba(248, 248, 242, 1);
 	font-weight: 300;
 	font-size: 15px;
 	margin-top: -5px;
@@ -305,7 +305,7 @@ a.active *,
 
 .ingrItem h5 {
 	display: inline;
-	color: white;
+	color: rgba(248, 248, 242, 1);
 }
 
 .ingrName {
@@ -321,7 +321,7 @@ a.active *,
 }
 
 .instDesc {
-	color: white;
+	color: rgba(248, 248, 242, 1);
 	font-size: 18px;
 	font-weight: 400;
 }
