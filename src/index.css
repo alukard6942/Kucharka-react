@@ -93,6 +93,10 @@ body {
 	width : 70%;
 }
 
+.wlth_desc:hover {
+	cursor: pointer;
+}
+
 .wlth_box {
 	padding-top : 18px;
 	margin: auto 0px;
@@ -104,6 +108,7 @@ body {
 }
 
 .wlth_box:hover {
+	cursor: pointer;
 	background : rgba(40, 42, 54, 1);
 }
 
