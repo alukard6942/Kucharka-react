@@ -242,3 +242,14 @@ a.active *,
 .starPicture {
 	margin: 5px 0px;
 }
+
+.starClick:hover {
+	cursor: pointer;
+	transform: scale(1.15, 1.15);
+	-webkit-transition: transform 0.1s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.starClick:active {
+	fill: "red"
+}
