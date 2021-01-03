@@ -23,7 +23,7 @@ function Navbar () {
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
 							<Link className="nav-link" to="/post">
-								post
+								add
 							</Link>
 						</li>
 

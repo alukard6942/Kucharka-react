@@ -10,7 +10,7 @@ function Instructions(props) {
         items.push(
             <div className="instItem">
                 <h5 className="instName">{element.name}</h5>
-                <h5 className="instDesc">{element.desc || ""}</h5>
+                <h6 className="instDesc">{element.desc || ""}</h6>
             </div>
         );
     });

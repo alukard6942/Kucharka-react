@@ -116,18 +116,18 @@ class RecipeDetail extends React.Component {
 					inst = {this.state.json.inst || []}
 				/>
 			</div>
-			<button onClick = {this.onClick}>
+		</div>
+
+		<div className = "detailButtons">
+			<hr/>
+			<button className="detailRemove" onClick = {this.remRec}>
+						Remove Recipe
+			</button>
+
+			<button className = "detailWalkthrue" onClick = {this.onClick}>
 					Walkthrough
 			</button>
 		</div>
-
-			<hr/>
-			<hr/>
-			<hr/>
-
-		<button onClick = {this.remRec}>
-					Remove Recipe
-		</button>
 		
 	</>)}
 }

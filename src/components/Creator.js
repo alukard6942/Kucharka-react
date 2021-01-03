@@ -65,6 +65,8 @@ class Creator extends React.Component {
 			requestOptions
 		).then((res, err)=>{(console.log(res + " : " + err))});
 		event.preventDefault();
+
+		this.props.history.push("/new")
 	}
 	
 	render() { return (	
@@ -88,7 +90,7 @@ class Creator extends React.Component {
 	  		</label>
 	  		</div>
 			<div>
-				<h6>Ingredieces:</h6>
+				<h6>Ingredients:</h6>
 				<Ingrediance/>
 			</div>
 			<div>

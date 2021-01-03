@@ -19,6 +19,7 @@ function Ingrediences(props) {
 
 	return (
 		<div  className="ingrDiv">
+			<h5> Ingredients </h5>
             {items}
 		</div>
 	)
