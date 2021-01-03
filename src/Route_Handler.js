@@ -8,6 +8,7 @@ import RecipeFeed from './components/RecipeFeed'
 import RecipeDetail from './components/RecipeDetail'
 import About from './components/About.js'
 import Creator from './components/Creator.js'
+import Editor from './components/Editor.js'
 import Walkthrue from './components/Walkthrue'
 
 class Route_Handler extends Component {
@@ -24,6 +25,7 @@ class Route_Handler extends Component {
 				<Route exact path="/walkthrough/:id" component={Walkthrue} />
 				<Route exact path="/about" component={About} />
 				<Route exact path="/post" component={Creator} />
+				<Route exact path="/edit/:id" component={Editor} />
 			</div>
         	<Footer />
 		</Router>

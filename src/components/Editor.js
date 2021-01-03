@@ -6,17 +6,27 @@ import Instraction  from './Creator/Instruction'
 import { initVal, validIngr, validInst } from '../validation';
 
 
-class Creator extends React.Component {
+class Editor extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			url : `https://spoonsprint.herokuapp.com/api/`,
+			url : `https://spoonsprint.herokuapp.com/api/${props.match.params.id}`,
 			title 		: "",
 			description : "",
 			image 		: "",
 		};
 		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        
+        fetch (this.state.url)
+        .then( res => res.json())
+        .then( out => {
+            this.setState({title: out.name,
+                        description: out.desc,
+                        })
+            this.forceUpdate();
+        })
+        .catch( err => console.log(err))
 	}
 	
 	handleChange(event) {
@@ -60,14 +70,16 @@ class Creator extends React.Component {
 			body: JSON.stringify(data)
 		};
 
-		fetch(
+		/*fetch(
 			this.state.url,
 			requestOptions
 		).then((res, err)=>{(console.log(res + " : " + err))});
-		event.preventDefault();
+        event.preventDefault();*/
+        console.log(data);
 	}
 	
-	render() { return (	
+	render() { 
+        return (	
 	  	<form onSubmit={this.handleSubmit}>
 	  		<div>
 	  		<label>
@@ -105,4 +117,4 @@ class Creator extends React.Component {
 	}	
 }
 
-export default Creator
+export default Editor
