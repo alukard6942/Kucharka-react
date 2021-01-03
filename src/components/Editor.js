@@ -13,7 +13,8 @@ class Editor extends React.Component {
 			url : `https://spoonsprint.herokuapp.com/api/${props.match.params.id}`,
 			title 		: "",
 			description : "",
-			image 		: "",
+            image 		: "",
+            ingr        : []
 		};
 		this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,6 +24,7 @@ class Editor extends React.Component {
         .then( out => {
             this.setState({title: out.name,
                         description: out.desc,
+                        ingr: out.ingr
                         })
             this.forceUpdate();
         })
@@ -101,7 +103,7 @@ class Editor extends React.Component {
 	  		</div>
 			<div>
 				<h6>Ingredieces:</h6>
-				<Ingrediance/>
+				<Ingrediance ingr = {this.state.ingr}/>
 			</div>
 			<div>
 				<h6>Instructions:</h6>

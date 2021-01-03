@@ -7,6 +7,8 @@ class Ingrediance extends React.Component {
 
 		this.handleChange = this.handleChange.bind(this)
 
+		console.log(props.ingr);
+
 		this.state = {
 			name   : "",
 			amount : "",
@@ -14,6 +16,7 @@ class Ingrediance extends React.Component {
 			empty  : true,
 			child  : null,
 		}
+			
 	}
 
 	handleChange (event) {
@@ -26,7 +29,7 @@ class Ingrediance extends React.Component {
 		// create new self
 		if ( this.state.empty ) {
 			this.setState({ 
-				child : (<> <hr className = "feedHeader"/> <Ingrediance/> </> ),
+				child : (<> <hr className = "feedHeader"/> <Ingrediance ingr = {this.state.ingr || []}/> </> ),
 				empty : false,
 			})
 		}
