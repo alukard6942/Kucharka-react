@@ -14,7 +14,8 @@ class Editor extends React.Component {
 			title 		: "",
 			description : "",
             image 		: "",
-            ingr        : []
+            ingr        : [],
+            inst        : []
 		};
 		this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,8 +25,9 @@ class Editor extends React.Component {
         .then( out => {
             this.setState({title: out.name,
                         description: out.desc,
-                        ingr: out.ingr
-                        })
+                        ingr: out.ingr,
+                        inst: out.inst
+                        });
             this.forceUpdate();
         })
         .catch( err => console.log(err))
@@ -77,8 +79,7 @@ class Editor extends React.Component {
 			requestOptions
 		).then((res, err)=>{(console.log(res + " : " + err))});
         event.preventDefault();*/
-        console.log(data);
-	}
+    }
 	
 	render() { 
         return (	

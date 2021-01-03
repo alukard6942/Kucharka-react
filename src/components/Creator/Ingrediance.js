@@ -7,7 +7,7 @@ class Ingrediance extends React.Component {
 
 		this.handleChange = this.handleChange.bind(this)
 
-		console.log(props.ingr);
+		//neviem proste v props je prazdny array :(
 
 		this.state = {
 			name   : "",
@@ -29,7 +29,7 @@ class Ingrediance extends React.Component {
 		// create new self
 		if ( this.state.empty ) {
 			this.setState({ 
-				child : (<> <hr className = "feedHeader"/> <Ingrediance ingr = {this.state.ingr || []}/> </> ),
+				child : (<> <hr className = "feedHeader"/> <Ingrediance/> </> ),
 				empty : false,
 			})
 		}
