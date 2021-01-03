@@ -71,6 +71,7 @@ body {
 .content { 
 	min-height: calc(100vh - 200px);
 	padding: 0px 35px;
+	max-width: 1000px
 }
 
 .recipeFeed {
@@ -335,6 +336,13 @@ a.active *,
 .detailImgWrap {
 	display: flex;  
   	flex-wrap: wrap;
+}
+
+.detailruler {
+	width : 200vh;
+	visibility: hidden; 
+	padding-bottom : 15px
+
 }
 
 .ingrDiv {

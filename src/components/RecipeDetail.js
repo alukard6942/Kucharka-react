@@ -111,11 +111,13 @@ class RecipeDetail extends React.Component {
 				ingr = {this.state.json.ingr || []}
 			/>
 
-			<div className="detailInsWrap">
-				<Instructions
-					inst = {this.state.json.inst || []}
-				/>
-			</div>
+		</div>
+
+		<div className="detailInsWrap">
+			<hr class = "detailruler"/>
+			<Instructions
+				inst = {this.state.json.inst || []}
+			/>
 		</div>
 
 		<div className = "detailButtons">
