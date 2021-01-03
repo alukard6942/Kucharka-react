@@ -285,6 +285,25 @@ a.active *,
 	display: inline-block;
 }
 
+.detailButtons {
+	width : 100%;
+}
+
+.detailWalkthrue {
+	width : 50%
+}
+.detailRemove {
+	width : 50%
+}
+
+.detailWalkthrue:hover {
+	background-color : green
+}
+
+.detailRemove:hover {
+	background-color : red
+}
+
 .detailViews {
 	margin-top: -10px;
 	margin-left: 2px;
@@ -323,6 +342,7 @@ a.active *,
 }
 
 .ingrItem h5 {
+	margin-top: 40px;
 	display: inline;
 	color: rgba(248, 248, 242, 1);
 }
@@ -341,7 +361,6 @@ a.active *,
 
 .instDesc {
 	color: rgba(248, 248, 242, 1);
-	font-size: 18px;
 	font-weight: 400;
 }
 
