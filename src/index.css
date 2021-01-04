@@ -323,7 +323,7 @@ a.active *,
 	max-height: 500px;
 	width: auto;
 	max-width: 50%;
-	float: left;
+	float: right;
 	margin-right: 25px;
 }
 

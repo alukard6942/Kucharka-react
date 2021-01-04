@@ -65,8 +65,6 @@ class Editor extends React.Component {
 				data.inst.push( validInst(targ[iter++].value, targ[iter++].value, targ[iter++].value));
 			else iter+=3
 		}
-
-		console.log (data)
 		
 		const requestOptions = {
 			method: 'POST',
@@ -77,11 +75,13 @@ class Editor extends React.Component {
 			body: JSON.stringify(data)
 		};
 
-		/*fetch(
+		
+
+		fetch(
 			this.state.url,
 			requestOptions
 		).then((res, err)=>{(console.log(res + " : " + err))});
-        event.preventDefault();*/
+        event.preventDefault();
     }
 	
 	render() { 

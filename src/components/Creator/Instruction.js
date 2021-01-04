@@ -24,11 +24,14 @@ class Instraction extends React.Component {
 	componentDidMount(){
 
 		if (this.ingr){
-			this.setState({
+			if(this.ingr[0]){
+				this.setState({
 				name   		: this.ingr[0].name,
 				description : this.ingr[0].desc,
 				duration    : this.ingr[0].duration,  
 			})
+			}
+			
 
 			if (this.ingr.length > 1){
 				this.setState({ 

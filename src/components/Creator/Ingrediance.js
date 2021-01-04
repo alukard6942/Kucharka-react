@@ -27,11 +27,14 @@ class Ingrediance extends React.Component {
 	componentDidMount(){
 
 		if (this.ingr){
-			this.setState({
+			if(this.ingr[0]){
+				this.setState({
 				name   : this.ingr[0].name,
 				amount : this.ingr[0].amount,
 				unit   : this.ingr[0].unit,  
 			})
+			}
+			
 
 			if (this.ingr.length > 1){
 				this.setState({ 
