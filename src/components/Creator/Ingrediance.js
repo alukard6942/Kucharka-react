@@ -5,9 +5,12 @@ class Ingrediance extends React.Component {
 	constructor (props) {
 		super(props)
 
+		this.ingr = props.ingr
+
 		this.handleChange = this.handleChange.bind(this)
 
 		//neviem proste v props je prazdny array :(
+		console.log(props)
 
 		this.state = {
 			name   : "",
@@ -16,8 +19,30 @@ class Ingrediance extends React.Component {
 			empty  : true,
 			child  : null,
 		}
+
+
 			
 	}
+
+	componentDidMount(){
+
+		if (this.ingr){
+			this.setState({
+				name   : this.ingr[0].name,
+				amount : this.ingr[0].amount,
+				unit   : this.ingr[0].unit,  
+			})
+
+			if (this.ingr.length > 1){
+				this.setState({ 
+					empty : false,
+					child : (<> <hr className = "feedHeader"/> <Ingrediance ingr = {this.ingr.slice(1)}/> </> )
+				})
+			}
+		}
+	}
+
+
 
 	handleChange (event) {
 

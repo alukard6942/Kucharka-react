@@ -5,6 +5,9 @@ class Instraction extends React.Component {
 	constructor (props) {
 		super(props)
 
+
+		this.ingr = props.inst
+
 		this.handleChange = this.handleChange.bind(this)
 
 		this.state = {
@@ -16,6 +19,26 @@ class Instraction extends React.Component {
 			child      : null,
 		}
 	}
+
+
+	componentDidMount(){
+
+		if (this.ingr){
+			this.setState({
+				name   		: this.ingr[0].name,
+				description : this.ingr[0].desc,
+				duration    : this.ingr[0].duration,  
+			})
+
+			if (this.ingr.length > 1){
+				this.setState({ 
+					empty : false,
+					child : (<> <hr className = "feedHeader"/> <Instraction inst = {this.ingr.slice(1)}/> </> )
+				})
+			}
+		}
+	}
+
 
 	handleChange (event) {
 

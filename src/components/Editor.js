@@ -23,12 +23,15 @@ class Editor extends React.Component {
         fetch (this.state.url)
         .then( res => res.json())
         .then( out => {
-            this.setState({title: out.name,
-                        description: out.desc,
-                        ingr: out.ingr,
-                        inst: out.inst
+            this.setState({
+						title: out.name,
+						description: out.desc,
+						ingr: <Ingrediance ingr={out.ingr}/>,
+						inst: <Instraction inst={out.inst}/>
                         });
+			this.setState({})
             this.forceUpdate();
+			console.log(out)
         })
         .catch( err => console.log(err))
 	}
@@ -104,11 +107,11 @@ class Editor extends React.Component {
 	  		</div>
 			<div>
 				<h6>Ingredieces:</h6>
-				<Ingrediance ingr = {this.state.ingr}/>
+				{ this.state.ingr }
 			</div>
 			<div>
 				<h6>Instructions:</h6>
-				<Instraction/>
+				{ this.state.inst }
 			</div>
 
 			<p></p>
