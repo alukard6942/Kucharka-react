@@ -123,7 +123,11 @@ class RecipeDetail extends React.Component {
 		<div className = "detailButtons">
 			<hr/>
 			<button className="detailRemove" onClick = {this.remRec}>
-						Remove Recipe
+					Remove Recipe
+			</button>
+
+			<button onClick = { () => this.props.history.push(`/edit/${this.state.id}`) }>
+				eddit
 			</button>
 
 			<button className = "detailWalkthrue" onClick = {this.onClick}>
